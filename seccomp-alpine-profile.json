@@ -1,0 +1,18 @@
+{
+  "defaultAction": "SCMP_ACT_ERRNO",
+  "architectures": ["SCMP_ARCH_X86_64"],
+  "syscalls": [
+    {
+      "names": [
+        "execve", "arch_prctl", "set_tid_address", "brk", "mmap",
+        "open", "fcntl", "fstat", "read", "close", "mprotect",
+        "getpid", "stat", "access", "readlink", "geteuid", "getuid",
+        "munmap", "getgid", "getegid", "getrandom", "umask",
+        "rt_sigprocmask", "rt_sigaction", "signalfd4", "prlimit64",
+        "writev", "exit_group",
+        "mount"  
+      ],
+      "action": "SCMP_ACT_ALLOW"
+    }
+  ]
+}

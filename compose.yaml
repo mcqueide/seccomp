@@ -1,0 +1,22 @@
+services:
+  seccomp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: seccomp
+
+    security_opt:
+      - no-new-privileges:true # Prevenir escalação
+      - seccomp:seccomp-db-profile.json # Perfil seccomp customizado
+    user: postgres
+    environment:
+      - POSTGRES_DB=people
+      - POSTGRES_USER=people
+      - POSTGRES_PASSWORD=people
+    volumes:
+      - seccomp_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  seccomp_data:

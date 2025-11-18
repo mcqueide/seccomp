@@ -1,0 +1,11 @@
+services:
+  alpine:
+    build:
+      context: .
+      dockerfile: Dockerfile.alpine
+    container_name: alpine
+
+    security_opt:
+      - no-new-privileges:true # Prevenir escalação
+      - seccomp:seccomp-log-profile.json # Perfil seccomp customizado
+    command: sleep infinity  # Manter o container em execução para testes
