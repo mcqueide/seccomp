@@ -5,12 +5,32 @@
     {
       "names": [
         "execve", "arch_prctl", "set_tid_address", "brk", "mmap",
-        "open", "fcntl", "fstat", "read", "close", "mprotect",
-        "getpid", "stat", "access", "readlink", "geteuid", "getuid",
+        "open", "openat", "fcntl", "fstat", "newfstatat", "read", "write", "close", "mprotect",
+        "getpid", "stat", "access", "readlink", "readlinkat", "geteuid", "getuid",
         "munmap", "getgid", "getegid", "getrandom", "umask",
-        "rt_sigprocmask", "rt_sigaction", "signalfd4", "prlimit64",
-        "writev", "exit_group",
-        "mount"  
+        "rt_sigprocmask", "rt_sigaction", "rt_sigreturn", "signalfd4", "prlimit64",
+        "writev", "readv", "exit_group", "mount", 
+        "futex", "nanosleep", "clock_nanosleep", "clone", "set_robust_list",
+        "capget", "capset", "chdir", "sysinfo",
+        "getcwd", "mkdir", "rmdir", "unlink", "unlinkat", "lseek", "fchmod", "fchown", "chmod", "chown",
+        "rename", "renameat", "renameat2", "link", "symlink", "fchmodat", "fchownat",
+        "fsync", "fdatasync", "fadvise64", "fallocate", "copy_file_range",
+        "socket", "bind", "connect", "listen", "accept", "accept4",
+        "shutdown", "setsockopt", "getsockopt", "getsockname", "getpeername",
+        "sendto", "recvfrom", "sendmsg", "recvmsg",
+        "epoll_create1", "epoll_ctl", "epoll_pwait", "epoll_wait", "pipe2", "eventfd2",
+        "syslog", "ftruncate", "lstat",
+        "statfs", "fstatfs", "getdents", "getdents64",
+        "getpgrp", "getpgid", "setpgid", "setsid", "getppid",
+        "fork", "vfork", "wait4", "pipe", "kill",
+        "dup", "dup2", "dup3", "ioctl",
+        "pread64", "pwrite64", "preadv", "pwritev", "madvise",
+        "shmget", "shmat", "shmdt", "shmctl",
+        "sync_file_range", "flock", "utimensat",
+        "setitimer", "getitimer", "timer_create", "timer_settime", "timer_gettime", "timer_delete",
+        "sigaltstack", "sched_yield",
+        "prctl", "getpriority", "setpriority", "setrlimit", "getrusage", "times",
+        "select", "pselect6", "poll"
       ],
       "action": "SCMP_ACT_ALLOW"
     }

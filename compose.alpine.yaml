@@ -7,5 +7,5 @@ services:
 
     security_opt:
       - no-new-privileges:true # Prevenir escalação
-      - seccomp:seccomp-log-profile.json # Perfil seccomp customizado
+      - seccomp:seccomp-alpine-profile.json # Perfil seccomp customizado
     command: sleep infinity  # Manter o container em execução para testes

@@ -5,12 +5,12 @@
     {
       "names": [
         "execve", "arch_prctl", "set_tid_address", "brk", "mmap",
-        "open", "fcntl", "fstat", "read", "close", "mprotect",
+        "open", "openat", "fcntl", "fstat", "newfstatat", "read", "write", "close", "mprotect",
         "getpid", "stat", "access", "readlink", "geteuid", "getuid",
         "munmap", "getgid", "getegid", "getrandom", "umask",
-        "rt_sigprocmask", "rt_sigaction", "signalfd4", "prlimit64",
-        "writev", "exit_group",
-        "mount"  
+        "rt_sigprocmask", "rt_sigaction", "rt_sigreturn", "signalfd4", "prlimit64",
+        "writev", "exit_group", "mount", "futex", "nanosleep", "clock_nanosleep", 
+        "clone", "set_robust_list","capget", "capset", "chdir"  
       ],
       "action": "SCMP_ACT_ALLOW"
     }
